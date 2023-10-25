@@ -1,8 +1,8 @@
 <h1>Swift</h1>
 
 Оглавление:
-<a name="Коллекции">Коллекции</a>
-
+<a name="collections"></a>
+- [Коллекции](#collections)
 
 
 ## Основы
