@@ -41,7 +41,16 @@
 - [Responder Chain](#responder-chain)
 - [UIView](#uiview)
 - [Auto Layout](#auto-layout)
-- [UIResponder](#uiresponder)
+- [Антипаттерн](#антипаттерн)
+- [Side tables](#side-tables)
+- [Hashable](#hashable)
+- [GCD](#gcd)
+- [Mutex](#mutex)
+- [Диспетчиризация](#диспетчиризация)
+- [Keychain](#keychain)
+- [CALayer and UIView](#calayer-and-uiview)
+- [Render Loop](#render-loop)
+- [UIKit элементы](#uikit-элементы)
 
 
 ## Основы
@@ -736,7 +745,7 @@ Auto Layout — это технология, основанная на поня
 ---
 
 ## Auto Layout и Constraint Resistance
-Для некоторых UIView мы не всегда можем применить конкретные значения. Например, если у нас есть UIButton с Tapжестко заданным значением, при локализации текст может быть обрезан.
+Для некоторых UIView мы не всегда можем применить конкретные значения. Например, если у нас есть UIButton с жестко заданным значением, при локализации текст может быть обрезан.
 Чтобы справиться с этим, не требуя изменения приоритета, мы можем использовать другой набор функций, чтобы избежать такого поведения. Двумя из них являются Content Hugging и Content Resistance.
     * Content hugging priority - приоритет сопротивления превышения intrinsic content size (не хочу чтобы была больше)
     * Content compression resistance priority - приоритет сопротивления занижения intrinsic content size (не хочу чтобы была меньше)
@@ -887,13 +896,11 @@ Keychain в Swift - это безопасное хранилище для сох
 
 ---
 
-## CALayer  and UIView
+## CALayer and UIView
 **CALayer** компонент для рендеринга визуального содержимого.
 **UIView** контейнер для слоев CALayer который обеспечивает обработке и взаимодействие  с пользователем
 
----
-
-## Обработка событий.
+### Обработка событий
 У **CALayer** нет средств для обработки событий таких как касание или жесты
 **UIView** может обрабатывать такие события
 
