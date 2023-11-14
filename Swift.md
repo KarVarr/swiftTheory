@@ -476,8 +476,9 @@ $${\color{orange}Бывают \space несколько \space опционал�
 * Полная форма записи: **Optional<T>**
 * Краткая форма записи:**T?**
 
-    let optionalChar: Optional<Character> = "a"
-    var xCoordinate: Int? = 12
+
+     let optionalChar: Optional<Character> = "a"
+     var xCoordinate: Int? = 12
 
 
 ---
