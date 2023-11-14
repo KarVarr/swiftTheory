@@ -493,6 +493,7 @@ $${\color{orange}Бывают \space несколько \space опционал�
      type(of: optionalVar) // Optional<String>.Type
 
 
+
 ---
 
 ## ООП
