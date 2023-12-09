@@ -516,8 +516,6 @@ $${\color{orange}Бывают \space несколько \space опционал�
      optionalVar = nil // nil
      type(of: optionalVar) // Optional<String>.Type
 
-
-
 ---
 
 ## ООП
