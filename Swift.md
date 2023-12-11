@@ -83,7 +83,6 @@ $${\color{orange}Псевдонимы \space типов \space typealias}$$
 
     typealias AudioSample = UInt16
 
-    
 $${\color{orange}Отладка \space с \space помощью \space утверждений}$$
 
     assert(_:_:file:line:).
