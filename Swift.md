@@ -463,15 +463,15 @@ Completion handler с атрибутом @escaping - это специальны
 в первом случае указание имени вообще отсутствует, а во втором используется 
 знак нижнего подчеркивания.
 
-    var sum: (_ numOne: Int, _ numTwo: Int) -> Int = {
-        $0 + $1
-    }
-    sum(10, 34) // 44
-
     let closurePrint: (String) -> Void = { text in
         print(text)
     }
     closurePrint("Text")
+    
+    var sum: (_ numOne: Int, _ numTwo: Int) -> Int = {
+        $0 + $1
+    }
+    sum(10, 34) // 44
 
 ---
 
