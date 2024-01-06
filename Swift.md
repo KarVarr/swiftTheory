@@ -1144,17 +1144,49 @@ $${\color{orange}Обязательные \space инициализаторы}$$
         return a + b
     }
 Ограничения типа могут быть указаны двумя способами:
+
 * Непосредственно в заполнителе типа, через двоеточие после параметра(Numeric).
 
-    func sum<T: Numeric>(_ a: T, _ b: T) -> T {
+
+      func sum<T: Numeric>(_ a: T, _ b: T) -> T {
         return a + b
-    }
+      }
 
 * С помощью ключевого слова where, указываемого после сигнатуры функции.
 
-   func sum<T>(_ a: T, _ b: T) -> T where T: Numeric {
-       return a + b
-   }
+
+      func sum<T>(_ a: T, _ b: T) -> T where T: Numeric {
+          return a + b
+      }
+
+**Универсальные объектные типы**
+Помимо универсальных функций, к дженерикам относятся и универсальные объектные типы. Для реализации стека воспользуемся структурой, реализовав в ней свойство items, которое будет хранить элементы стека, а также два метода:
+
+    struct Stack<T> {
+        var items = [T]()
+        mutating func push(_ item: T) {
+            items.insert(contentsOf: [item], at: 0)
+        }
+        mutating func pop() -> T {
+            return items.removeFirst()
+        }
+    }
+    
+    var genericIntStorage = Stack(items: [1,2,3,4,5])
+    var genericStringStorage = Stack(items: ["Bob", "John", "Alex"])
+
+Для создания универсального типа вновь используется заполнитель <T>, который указывается после имени объектного типа. Параметр типа T обеспечивает использование любого типа данных для значений стека.
+**Ограничения** доступны и при работе с универсальными типами.
+
+    struct Stack<T: Numeric> {
+        var items = [T]()
+        mutating func push(_ item: T) {
+            items.insert(contentsOf: [item], at: 0)
+        }
+        mutating func pop() -> T {
+            return items.removeFirst()
+        }
+    }
 
 
 
