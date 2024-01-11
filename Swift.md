@@ -971,29 +971,29 @@ $${\color{blue}Обязательные \space инициализаторы}$$
 Вы используете оператор defer для выполнения набора инструкций перед тем как исполнение кода оставит текущий блок. Это позволяет сделать любую необходимую очистку. Он выполниться после return и перед выходом из области видимости… пишется обычно в начале области видимости. Если указаны несколько defer то они выполняться в обратном порядке, снизу вверх: вот пример 
 
     func deferTest() -> Strina {
-        var currentString = «»
-        currentString += "A"
+            var currentString = «»
+            currentString += "A"
+        
+        defer {
+                currentString += "B"
+        }
     
-    defer {
-            currentString += "B"
-    }
-
-    if true {
-    defer {
-        currentString += "C"
-    }
-    defer {
-        currentString += "D"
-    }
-    currentString += "E"
-    }
-
-    currentString += "F"
-    defer {
-        currentString += "G" 
-    }
-
-    return currentString
+        if true {
+        defer {
+            currentString += "C"
+        }
+        defer {
+            currentString += "D"
+        }
+        currentString += "E"
+        }
+    
+        currentString += "F"
+        defer {
+            currentString += "G" 
+        }
+    
+        return currentString
     }
     Это будет равно =  A E D C F // эти буквы будут присвоены уже после return. Но при вызове функции мы их не увидимG B
 
