@@ -979,16 +979,19 @@ $${\color{blue}Обязательные \space инициализаторы}$$
         }
     
         if true {
-        defer {
-            currentString += "C"
-        }
-        defer {
-            currentString += "D"
-        }
-        currentString += "E"
+            defer {
+                currentString += "C"
+            }
+            
+            defer {
+                currentString += "D"
+            }
+            
+            currentString += "E"
         }
     
         currentString += "F"
+        
         defer {
             currentString += "G" 
         }
