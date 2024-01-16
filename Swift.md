@@ -97,9 +97,6 @@ $${\color{blue}Отладка \space с \space помощью \space утвер�
     var peopleComingToEatPizza = 8
 
 
-
-
-
 ---
 
 ## Базовые операторы 
