@@ -1623,16 +1623,15 @@ User Defaults хранит данные в plist-файлах. Работае�
 * Используйте viewWillTransition(to:with:), когда вам нужно выполнить действия, специфичные для изменения ориентации экрана. Например, вы можете перестроить интерфейс, пересчитать размеры элементов или изменить расположение ваших представлений.
 * Используйте traitCollectionDidChange(_:), когда вам нужно реагировать на изменение trait collection в более общем контексте, который может включать в себя не только изменение ориентации, но и другие факторы, влияющие на пользовательский интерфейс.
 
-
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if view.traitCollection.horizontalSizeClass == .compact {
-        
+        override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            if view.traitCollection.horizontalSizeClass == .compact {
+            
+            }
+            
+            if view.traitCollection.verticalSizeClass == .regular {
+            
+            }
         }
-        
-        if view.traitCollection.verticalSizeClass == .regular {
-        
-        }
-    }
 
 ---
 
