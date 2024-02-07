@@ -2169,10 +2169,10 @@ Keychain в Swift это безопасное хранилище для сохр
     * Использовать class вместо структуры потому что такие структуры не допускаются из-за потенциальной бесконечной рекурсии при копировании или присваивании.
     > error: value type 'Node' cannot have a stored property that recursively contains it 
   
-    struct Node { // Error
-      var payload = 0
-      var next: Node?
-    }
+        struct Node { // Error
+          var payload = 0
+          var next: Node?
+        }
 
 * ***Что такое композиция класса***
     * Композиция класса в программировании - это техника создания нового класса из существующих классов.
