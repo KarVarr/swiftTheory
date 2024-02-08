@@ -2224,11 +2224,51 @@ Keychain в Swift это безопасное хранилище для сохр
                y += 1
             }
 
-    x - локальная переменная, которая хранится в стеке. Она уничтожается после завершения myFunction.
-    y - статическая переменная, которая хранится в куче. Она сохраняет свое значение между вызовами myFunction.
+        * x - локальная переменная, которая хранится в стеке. Она уничтожается после завершения myFunction.
+        * y - статическая переменная, которая хранится в куче. Она сохраняет свое значение между вызовами myFunction.
   
 * ***Случаи, когда value объекты будут в куче / reference в стэке***
 * ***У нас есть функция которая принимает объект, что будет когда мы передадим обьект reference type и объект value type?***
+    * Reference Type:
+        * Ссылка на объект передается в функцию.
+        * Изменения, внесенные в объект внутри функции, **будут видны извне**.
+        * Объект может быть "null".
+    * Value Type:
+        * Копия объекта передается в функцию.
+        * Изменения, внесенные в объект внутри функции, не будут видны извне.
+        * Объект не может быть "null".
+
+              // Reference type
+            class Person {
+              var name: String
+              
+              init(name: String) {
+                self.name = name
+              }
+            }
+            
+            func changeName(person: Person) {
+              person.name = "New Name"
+            }
+            
+            var person = Person(name: "John Doe")
+            changeName(person: person)
+            print(person.name) // "New Name"
+            
+            // Value type
+            struct Address {
+              var street: String
+              var city: String
+            }
+            
+            func changeAddress(address: Address) {
+              address.street = "New Street"
+            }
+            
+            var address = Address(street: "Old Street", city: "New York")
+            changeAddress(address: address)
+            print(address.street) // "Old Street"
+
 * ***В чем разница для компилятора в escaping closure и non-escaping?***
 * ***Как можно оптимизировать размер памяти, занимаемой структурой? (aligment)***
 
