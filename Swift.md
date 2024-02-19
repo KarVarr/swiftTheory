@@ -2,6 +2,7 @@
 
 Оглавление:
 
+- [Apple Human Interface Guidelines](#apple-human-interface-guidelines)
 - [Основы](#основы)
 - [Базовые операторы](#базовые-операторы)
 - [Хештруемые и сопоставимые данные](#хештруемые-и-сопоставимые-данные)
@@ -65,6 +66,13 @@
     - [Язык](#язык)
     - [Class Struct](#class-struct)
     - [Stack vs Heap](#stack-vs-heap)
+      
+
+
+## Apple Human Interface Guidelines
+
+
+
 
 ## Основы
 
