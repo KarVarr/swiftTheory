@@ -69,7 +69,6 @@
       
 
 
-
 ## Apple Human Interface Guidelines
 
 ### ***Модальность***
