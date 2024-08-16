@@ -67,7 +67,6 @@
     - [Class Struct](#class-struct)
     - [Stack vs Heap](#stack-vs-heap)
       
-
 ## Apple Human Interface Guidelines
 
 ### ***Модальность***
